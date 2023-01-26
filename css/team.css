@@ -1,0 +1,119 @@
+
+#header{
+    background-color: rgb(9, 72, 179);
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    
+}
+.our_team{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 700;
+}
+#container{
+    position: relative;
+    display: grid;
+    margin-top: -100px;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, 25rem);
+}
+
+#card_body{
+    height: 375px;
+    margin: 0px 20px 150px 20px;
+    box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03) !important;
+    border-radius: 10px;
+    border: .0625rem solid rgba(243,247,250,.05);
+    background-color: #fff;
+    border-color:   #eaedf2 !important;
+}
+#card{
+    align-items: center;
+    border: none;
+}
+#card img{
+    margin-top: -60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#card-desc{
+    padding: 20px;
+    align-items: center;
+    border: none;
+}
+#card-desc h5{
+    font-weight: 600;
+    color: #24262b;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+.social_icons{
+
+    list-style-type: none;
+    display: flex;
+    padding-left: 0px;
+}
+
+.second-footer{
+    height: 250px;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: -300px;
+    background-color: rgb(9, 72, 179);
+}
+
+.footer{
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: 'flamenco';
+    height: 300px;
+    background-color: rgb(9, 72, 179);
+}
+.thanks{
+    font-family: 'flamenco';
+    font-weight: 700;
+    color: blue;
+}
+
+#last-container{
+    background-color: #f5f8fb;
+}
+#supervisers{
+    display: grid;
+    align-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, 25rem);
+}
+#last-card_body{
+    height: 450px;
+    margin: 0px 20px 100px 20px;
+    box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03) !important;
+    border-radius: 10px;
+    border: .0625rem solid rgba(243,247,250,.05);
+    background-color: #fff;
+    border-color:   #eaedf2 !important;
+}
+
+#last-card{
+    align-items: center;
+    border: none;
+}
+
+#last-card img{
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+#copyright{
+    margin-top: 100px;
+}

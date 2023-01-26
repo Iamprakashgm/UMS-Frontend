@@ -1,0 +1,132 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    position: relative;
+    justify-content: space-around;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(7, 72, 179);
+    color: rgb(255, 255, 255);
+    /* font-size: 20px; */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: .5s;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+.base-layers,
+.utility-layers,
+.raster-layers {
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+}
+
+.layer,
+h2 {
+    padding-left: 30px;
+}
+
+.form-check-input {
+    margin-top: 0;
+}
+
+fieldset:hover {
+    border: 1px solid #0DFF92;
+}
+
+
+.layer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.layer input {
+    width: 30px;
+    height: 30px;
+}
+
+.layer-icon {
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    /* background-color: white; */
+    border: 1px solid rgb(121, 118, 118);
+}
+
+.layer:hover,
+label:hover,
+input:hover {
+    cursor: pointer;
+}
+
+input[type=radio]:checked~label,
+input[type=checkbox]:checked~label {
+    color: #0DFF92;
+}

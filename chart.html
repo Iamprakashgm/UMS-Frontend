@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UMS | Chart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/chart.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="header">
+        <div class="nav-element">
+            <img class="logo" src="images/Emblem_of_Nepal.svg" height="100px" width="120px" />
+        </div>
+        <div class="nav-element">
+            <h1 id="head1">Utility Management Data Portal
+            </h1>
+            <h4 id="head2">Annapurna Rural Municipality Ward No.2
+            </h4>
+        </div>
+        <div class="nav-element">
+            <img class="logo" src="images/nepalflag.gif" height="120px" width="100px" />
+        </div>
+    </div>
+    <div class="" id="wave">
+        <img src="/images/wave.png" alt="">
+    </div>
+    <div class="container mt-5">
+        <div class="text-center heading">
+            <h1>Demographic Profile</h1>
+        </div>
+        <div class="card align-items-center text-center" id="demograph">
+            <div class="card card-body">
+                <i class="fa-solid fa-house-user" id="icon"></i>
+                <h1 class="name">Household</h1>
+                <h1 class="number_data" onload="increaseHouse()" id="house">433</h1>
+            </div>
+            <div class="card card-body">
+                <i class="fa-solid fa-people-group" id="icon"></i>
+                <h1 class="name">Population</h1>
+                <h1 class="number_data" onload="increasePopulation()">2539</h1>
+            </div>
+            <div class="card card-body">
+                <i class="fa-solid fa-map" id="icon"></i>
+                <h1 class="name">Area(sq.km)</h1>
+                <h1 class="number_data" onload="increaseArea()">26.20</h1>
+            </div>
+            <div class="card card-body">
+                <img src="./images/pop_density.png" alt="" height="50px" width="50px">
+                <h1 class="name">Pop. Density</h1>
+                <h1 class="number_data" onload="increasePopDensity()">98</h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container my-5 py-3 chart-container">
+        <div class="text-center heading">
+            <h1>Charts</h1>
+        </div>
+        <div class="card align-items-center text-center" style="border: none;" id="chart">
+            <div class="card">
+                <canvas id="gender-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+            <div class="card">
+                <canvas id="roof-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+            <div class="card">
+                <canvas id="internet-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+            <div class="card">
+                <canvas id="cooking-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+            <div class="card">
+                <canvas id="water-supply-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+            <div class="card">
+                <canvas id="lighting-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+            <div class="card">
+                <canvas id="school-chart" style="height: 100%; width: 100%;">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <hr>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="./js/chart.js"></script>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UMS | Map Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/map.css">
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <div class="top-bar">
+            <button
+                style="border: 1px solid #0DFF92; border-radius: 20px; font-family: 'flamenco'; text-transform: uppercase; background-color: transparent; color: black; font-weight: 700;"><a
+                    href="index.html">Home Page</a></button>
+            <button style="background-color:transparent; border: none; font-size: 50px;"><a href="javascript:void(0)"
+                    class="closebtn" onclick="closeNav()">×</a></button>
+        </div>
+        <div class="card base-layers">
+            <h2 style="font-weight: 700;">Base Layers</h2>
+            <fieldset>
+                <div class="layer">
+                    <input type="radio" class="form-check-input" name="selector" id="osm">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <label for="osm">OpenStreetMap</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="radio" class="form-check-input" name="selector" id="googlesat">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <label for="googlesat">Google Satellite Imagery</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="radio" class="form-check-input" name="selector" id="esri">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <label for="esri">ESRI World Imagery</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="radio" class="form-check-input" name="selector" id="mapbox" checked>
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <label for="mapbox">Mapbox Imagery</label>
+                </div>
+            </fieldset>
+        </div><br>
+        <hr>
+        <div class="card utility-layers">
+            <h2 style="font-weight: 700;">Vector Layers</h2>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="boundary" checked disabled>
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-draw-polygon"></i>
+                    </div>
+                    <label for="boundary">Ward Boundary</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="household">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-house-user"></i>
+                    </div>
+                    <label for="household">Household</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="road_network">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <label for="road_network">Road Network</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="water_supply">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <label for="water_supply">Water Supply</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="transmission_line">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <label for="transmission_line">Transmission Line</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="schools">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <label for="schools">Schools</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="offices">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <label for="offices">Offices</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="health_center">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-briefcase-medical"></i>
+                    </div>
+                    <label for="health_center">Health Center</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="others">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+                    <label for="others">Others</label>
+                </div>
+            </fieldset>
+        </div><br>
+        <hr>
+        <div class="card raster-layers">
+            <h2 style="font-weight: 700;">Raster Layers</h2>
+            <fieldset>
+                <div class="layer">
+                    <input type="checkbox" class="form-check-input" id="orthophoto">
+                    <div class="layer-icon">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+                    <label for="orthophoto">Orthophoto</label>
+                </div>
+            </fieldset>
+        </div><br>
+        <hr>
+    </div>
+    <div id="main">
+        <button type="submit" class="openbtn" onclick="openNav()">☰</button>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "400px";
+        document.getElementById("main").style.display = none;
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "50px";
+        document.getElementById("main").style.marginTop = "50px";
+    }
+</script>
+
+</html>
